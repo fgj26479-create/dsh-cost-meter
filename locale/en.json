@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Cost Meter (CNY)",
+    "description": "Prices token usage from DeepSeek's published rate card and shows the RMB cost at the end of every turn and under the composer, with a click-through breakdown of cache hits, tariff window, and price source."
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "name": "dsh-cost-meter",
+  "version": "1.0.0",
+  "description": "Real-time RMB cost of every turn's token usage, priced from DeepSeek's published rate card.",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fgj26479-create/dsh-cost-meter.git"
+  },
+  "homepage": "https://github.com/fgj26479-create/dsh-cost-meter#readme",
+  "bugs": {
+    "url": "https://github.com/fgj26479-create/dsh-cost-meter/issues"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "cost",
+    "token-usage",
+    "pricing"
+  ],
+  "icon": "./icon.svg",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "lib/",
+    "cordis.patch.yml",
+    "icon.svg",
+    "locale/",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-chat"
+      ]
+    }
+  }
+}

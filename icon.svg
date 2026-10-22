@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="CNY cost meter">
+  <defs>
+    <linearGradient id="dcmFace" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3fb27f" />
+      <stop offset="1" stop-color="#1f7a55" />
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="28" fill="url(#dcmFace)" />
+  <circle cx="32" cy="32" r="28" fill="none" stroke="#ffffff" stroke-opacity="0.35" stroke-width="2" />
+  <g fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round">
+    <path d="M20 20 L32 32 L44 20" />
+    <path d="M32 32 L32 47" />
+    <path d="M22 34 L42 34" />
+    <path d="M22 41 L42 41" />
+  </g>
+  <circle cx="49" cy="15" r="7" fill="#ffffff" />
+  <path d="M49 11.5 L49 18.5 M46 13.5 L52 13.5 M46 16.5 L52 16.5" stroke="#1f7a55" stroke-width="1.6" stroke-linecap="round" />
+</svg>

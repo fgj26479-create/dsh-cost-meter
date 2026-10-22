@@ -1,0 +1,28 @@
+# dsh-cost-meter — real-time RMB cost of token usage.
+#
+# The plugin is self-contained: it imports nothing but Node built-ins, so it has
+# no dependencies and no build step. Every key below is optional; the values
+# shown are the defaults the plugin falls back to.
+
+- insert:
+    - id: cost-meter
+      name: 'dsh-cost-meter'
+      config:
+        # Official pricing page (Simplified Chinese — the locale that quotes CNY).
+        pricingUrl: 'https://api-docs.deepseek.com/zh-cn/quick_start/pricing/'
+        # Secondary source. The English page quotes USD, so it is only used with
+        # the conversion rate below, and only when the primary page fails.
+        fallbackPricingUrl: 'https://api-docs.deepseek.com/quick_start/pricing/'
+        usdToCny: 7.2
+        # Re-read the published table this often. Costs are re-priced against the
+        # current card whenever the browser next reads the projection.
+        refreshHours: 6
+        fetchTimeoutMs: 8000
+        # Tariff applied to a route whose model is absent from the card.
+        fallbackModel: deepseek-flash
+        # Chinese public holidays (Beijing dates). Off-peak, i.e. half price.
+        holidays: []
+        maxTurns: 60
+        maxRoutes: 12
+        cache: true
+        enabled: true
